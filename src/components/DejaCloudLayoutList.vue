@@ -12,9 +12,6 @@ const layouts = useCollection(user.value ? layoutsQuery : null)
 
 <template>
   <main class="" v-if="user && layouts?.length > 0">
-    <h2 class="text-sm text-transparent bg-clip-text bg-gradient-to-r from-cyan-800 to-indigo-600">
-      {{ user?.displayName }}
-    </h2>
     <ul class="flex flex-col" v-if="Array.isArray(layouts) && layouts.length > 0">
       <li class="mb-2" v-for="layout in layouts" :key="layout.layoutId">
         <button 
